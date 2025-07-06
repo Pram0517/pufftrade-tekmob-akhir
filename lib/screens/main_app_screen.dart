@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pufftrade/screens/home_content.dart';
 import 'package:pufftrade/screens/product_content.dart';
 import 'package:pufftrade/screens/about_us_screen.dart'; // Import AboutUsScreen
+import 'package:pufftrade/screens/profile/profile_screen.dart'; // Import ProfileScreen
+import 'package:pufftrade/screens/contact_screen.dart'; // Import ContactScreen
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -71,15 +73,20 @@ class _MainAppScreenState extends State<MainAppScreen> {
             Expanded(
               child: _buildAppBarTextButton('Contact', isSmallScreen ? 9.0 : 14.0, () {
                 print('Contact tapped');
-                // TODO: Navigasi ke halaman Contact terpisah jika tidak ingin di PageView
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ContactScreen()),
+                );
               }),
             ),
             Expanded(
               child: IconButton(
                 icon: Icon(Icons.person, color: Colors.black, size: isSmallScreen ? 16 : 22),
                 onPressed: () {
-                  print('Account icon tapped');
-                  // TODO: Navigasi ke halaman Account terpisah jika tidak ingin di PageView
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProfileScreen()),
+                  );
                 },
               ),
             ),

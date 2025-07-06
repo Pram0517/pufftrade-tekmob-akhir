@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pufftrade/models/product.dart';
 import 'package:pufftrade/screens/product_detail_screen.dart';
+import 'package:pufftrade/screens/product_screen.dart'; // Import ProductScreen
 
 // Konten Halaman Beranda untuk aplikasi PUFFTRADE (tanpa AppBar/Scaffold)
 class HomeContent extends StatefulWidget {
@@ -15,7 +16,7 @@ class _HomeContentState extends State<HomeContent> {
   final List<Product> featuredProducts = [
     Product(
       name: 'TRML T200',
-      imagePath: 'assets/products/trml_t200.png',
+      imagePath: 'assets/images/trmlt200.png',
       whatIs: 'TRML T200 adalah perangkat vaping canggih dengan daya 200 watt berbasis potensiometer. Tanpa tombol pengatur khusus, pengguna cukup memutar kenop potensiometer untuk memilih level output. Desain bodi berbahan aluminium alloy, mod ini terasa kokoh dan lebih premium daripada banyak mod lain yang masih menggunakan bahan plastik. Sebagai mod dengan output 5-200 watt dan rentang resistansi 0.07 Ω hingga 3.5 Ω, TRML T200 mampu mengakomodasi berbagai jenis atomizer. Proteksi chipset di dalamnya meliputi pencegahan short, overheat, dan low battery, menjadikannya cukup aman asal penggunaan sesuai prosedur.',
       advantages: [
         'Daya 200 watt berbasis potensiometer.',
@@ -39,7 +40,7 @@ class _HomeContentState extends State<HomeContent> {
     ),
     Product(
       name: 'Makna V2 - Berry Dough',
-      imagePath: 'assets/products/makna_v2.png',
+      imagePath: 'assets/images/makna.jpg',
       whatIs: 'Makna V2 - Berry Dough adalah liquid premium dengan perpaduan rasa berry dan adonan kue yang manis dan lezat, memberikan pengalaman vaping yang memuaskan.',
       advantages: ['Rasa manis dan lezat.', 'Uap tebal.', 'Kemasan menarik.'],
       disadvantages: ['Harga premium.', 'Tidak cocok untuk yang tidak suka manis.'],
@@ -50,7 +51,7 @@ class _HomeContentState extends State<HomeContent> {
     ),
     Product(
       name: 'Oxva Xlim Pro 2',
-      imagePath: 'assets/products/oxva_xlim_pro_2.png',
+      imagePath: 'assets/images/oxva-xlim.jpeg',
       whatIs: 'Oxva Xlim Pro 2 adalah pod system ringkas yang dirancang untuk kemudahan penggunaan dan performa vaping yang luar biasa, cocok untuk vaper pemula maupun berpengalaman.',
       advantages: ['Desain ramping dan portabel.', 'Rasa yang intens.', 'Baterai tahan lama.'],
       disadvantages: ['Kapasitas pod kecil.', 'Pilihan warna terbatas.'],
@@ -64,7 +65,7 @@ class _HomeContentState extends State<HomeContent> {
     ),
     Product(
       name: 'Neutrall Toolkit',
-      imagePath: 'assets/products/neutrall_toolkit.png',
+      imagePath: 'https://img.vawoo.com/images/thumbnails/340/370/detailed/339/vaping-took-kit-diy-kit-16.jpg',
       whatIs: 'Neutrall Toolkit adalah set alat lengkap yang dirancang untuk membantu vaper dalam membangun dan merawat coil serta perangkat vaping lainnya.',
       advantages: ['Alat lengkap.', 'Kualitas bahan bagus.', 'Kotak penyimpanan rapi.'],
       disadvantages: ['Harga sedikit mahal.', 'Beberapa alat mungkin jarang digunakan.'],
@@ -78,7 +79,7 @@ class _HomeContentState extends State<HomeContent> {
   final List<Product> latestProducts = [
     Product(
       name: 'Hotcig R99',
-      imagePath: 'assets/products/hotcig_r99.png',
+      imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj_7g0hVYsTQVtyQqkbtdBzHn75mI3Bx--bw&s',
       whatIs: 'Hotcig R99 adalah mod vaping tangguh yang dilengkapi dengan chip canggih untuk performa stabil dan desain ergonomis yang nyaman digenggam.',
       advantages: ['Chipset responsif.', 'Desain ergonomis.', 'Daya tahan baterai baik.'],
       disadvantages: ['Ukuran agak besar.', 'Pilihan warna terbatas.'],
@@ -91,7 +92,7 @@ class _HomeContentState extends State<HomeContent> {
     ),
     Product(
       name: 'GeekVape Wenax M',
-      imagePath: 'assets/products/geekvape_wenax_m.png',
+      imagePath: 'https://img.vawoo.com/images/detailed/345/earth_art.jpg',
       whatIs: 'GeekVape Wenax M adalah pod vape yang stylish dan mudah digunakan, ideal untuk pemula yang mencari pengalaman vaping yang sederhana namun memuaskan.',
       advantages: ['Sangat portabel.', 'Mudah digunakan.', 'Rasa yang jernih.'],
       disadvantages: ['Kapasitas baterai standar.', 'Tidak ada pengaturan daya.'],
@@ -102,7 +103,7 @@ class _HomeContentState extends State<HomeContent> {
     ),
     Product(
       name: 'BadFellas V3 - Vanilla Almond Don',
-      imagePath: 'assets/products/badfellas_v3.png',
+      imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2eVWREcBuZGGplmEO27ar_Y0rNac733mi4g&s',
       whatIs: 'BadFellas V3 - Vanilla Almond Don adalah liquid creamy dengan perpaduan rasa vanilla yang lembut dan almond yang kaya, menciptakan profil rasa yang unik dan memanjakan lidah.',
       advantages: ['Rasa creamy yang kuat.', 'Perpaduan rasa unik.', 'Uap tebal.'],
       disadvantages: ['Mungkin terlalu manis untuk beberapa orang.', 'Harga premium.'],
@@ -113,7 +114,7 @@ class _HomeContentState extends State<HomeContent> {
     ),
     Product(
       name: 'Orion AIO Mini Pod Kit',
-      imagePath: 'assets/products/orion_aio_mini.png',
+      imagePath: 'assets/images/orion-aio-mini-pod-kit.jpeg',
       whatIs: 'Orion AIO Mini Pod Kit adalah kit pod all-in-one mini yang portabel dan bertenaga, menawarkan pengalaman vaping yang serbaguna dengan berbagai pilihan coil.',
       advantages: ['Ukuran kompak.', 'Bertenaga.', 'Berbagai pilihan coil.'],
       disadvantages: ['Kapasitas liquid kecil.', 'Harga agak tinggi.'],
@@ -171,28 +172,33 @@ class _HomeContentState extends State<HomeContent> {
                       ),
                       const SizedBox(height: 15),
                       ElevatedButton(
-                        onPressed: () {
-                          print('Explore button tapped');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                        ),
-                        child: const Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              'Explore',
-                              style: TextStyle(color: Colors.white, fontSize: 14),
-                            ),
-                            SizedBox(width: 6),
-                            Icon(Icons.arrow_forward, color: Colors.white, size: 14),
-                          ],
-                        ),
-                      ),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const ProductScreen(),
+      ),
+    );
+  },
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.black,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(8),
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+  ),
+  child: const Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Text(
+        'Explore',
+        style: TextStyle(color: Colors.white, fontSize: 14),
+      ),
+      SizedBox(width: 6),
+      Icon(Icons.arrow_forward, color: Colors.white, size: 14),
+    ],
+  ),
+),
                     ],
                   ),
                 ),
@@ -334,11 +340,22 @@ class _HomeContentState extends State<HomeContent> {
           children: [
             ClipRRect(
               borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
-              child: Image.asset(
+              child: Image.network(
                 product.imagePath,
                 height: 100,
                 width: double.infinity,
                 fit: BoxFit.cover,
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Container(
+                    height: 100,
+                    width: double.infinity,
+                    color: Colors.grey[200],
+                    child: const Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                  );
+                },
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
                     height: 100,
